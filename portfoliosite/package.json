@@ -12,6 +12,7 @@
     "build:frontend": "vite build",
     "build:backend": "tsc -p ./backend/tsconfig.json",
     "build": "npm run build:frontend && npm run build:backend",
+    "build:netlify": "vite build", 
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "start": "NODE_ENV=production node dist-backend/server/server-start.js",
     "create-video-thumbnails": "NODE_ENV=production node serverUtils/createVideoThumbnails.js",
