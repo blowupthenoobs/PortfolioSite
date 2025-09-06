@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #202020;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  background-color: #434343;
+}
+
+input:focus {
+  background-color: #434343;
+  border-color:#3c85ee;
+}
+
+body {
+  height: 100dvh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+body,
+html {
+  margin: 0px;
+  padding: 0px;
+  & input[type="text"],
+  & input[type="submit"] {
+    outline: none;
+  }
+}
+body {
+  & * {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    // background-color: #202020;
+  }
+}
+
+.dynamic-height {
+  height: 100dvh;
+}
