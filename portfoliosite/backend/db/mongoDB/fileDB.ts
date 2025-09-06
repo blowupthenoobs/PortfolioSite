@@ -111,8 +111,9 @@ class DbUtil {
   };
 
   getFileListByParent = async (userID: string, parent: string) => {
+    // fixed: use metadata.owner to be consistent with the rest of the file
     const fileList = await File.find({
-      owner: userID,
+      "metadata.owner": userID,
       "metadata.parent": parent,
     });
 
@@ -171,7 +172,8 @@ class DbUtil {
           "metadata.hasThumbnail": true,
           "metadata.thumbnailID": thumbnailID,
         },
-      }
+      },
+      { new: true }
     );
 
     return file;
@@ -184,7 +186,8 @@ class DbUtil {
       { _id: new ObjectId(fileID) },
       {
         $unset: { "metadata.linkType": "", "metadata.link": "" },
-      }
+      },
+      { new: true }
     );
 
     return file;
@@ -349,16 +352,18 @@ class DbUtil {
     newParent: string,
     newParentList: string
   ) => {
-    await File.updateMany(
+    // Removed invalid `{ new: true }` option — updateMany does not accept it.
+    const result = await File.updateMany(
       { "metadata.owner": userID, "metadata.parent": currentParent },
       {
         $set: {
           "metadata.parent": newParent,
           "metadata.parentList": newParentList,
         },
-      },
-      { new: true }
+      }
     );
+
+    return result;
   };
 
   // DELETE
@@ -373,4 +378,3 @@ class DbUtil {
 }
 
 export default DbUtil;
-module.exports = DbUtil;
