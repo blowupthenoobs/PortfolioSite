@@ -60,6 +60,7 @@ export default defineConfig(({ mode }) => {
               rewrite: (path) => path.replace(/^\/api/, ""),
             },
           }
+          
         : undefined,
       host: "0.0.0.0", // makes it accessible from anywhere
       allowedHosts: ["drivingthetestdrive.blowupthenoobs.dev"], // ✅ allow your tunnel domain
