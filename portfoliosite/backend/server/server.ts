@@ -76,6 +76,7 @@ app.use(
   createProxyMiddleware({
     target: "https://drivingthetestdrive.blowupthenoobs.dev",
     changeOrigin:true,
+    pathRewrite: {"^/drive": ""}
   })
 )
 
