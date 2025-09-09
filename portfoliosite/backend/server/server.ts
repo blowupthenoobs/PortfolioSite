@@ -76,7 +76,8 @@ app.use(
   createProxyMiddleware({
     target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
     secure:false,
-    changeOrigin:true
+    changeOrigin:true,
+    pathRewrite: {"^/drive": "/drive" }
   })
 )
 
