@@ -78,7 +78,7 @@ app.use(
     changeOrigin:true,
     ws: true,
     secure: false,
-    // pathRewrite: {"^/drive": "/drive" }
+    pathRewrite: {"^/drive": "" }
   })
 )
 
