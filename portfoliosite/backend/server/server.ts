@@ -77,6 +77,7 @@ app.use(
     target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev:5173",
     changeOrigin:true,
     ws: true,
+    secure: false,
     // pathRewrite: {"^/drive": "/drive" }
   })
 )
