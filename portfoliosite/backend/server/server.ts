@@ -74,7 +74,7 @@ app.use(middlewareErrorHandler);
 app.use(
   "/drive",
   createProxyMiddleware({
-    target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev:5173",
+    target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
     changeOrigin:true,
     ws: true,
     secure: false,
