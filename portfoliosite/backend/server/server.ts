@@ -15,6 +15,12 @@ import env from "../enviroment/env";
 import { middlewareErrorHandler } from "../middleware/utils/middleware-utils";
 import cors from "cors";
 
+import dotenv from "dotenv";
+dotenv.config();
+
+const clientID = process.env.CF_AccessClientId;
+const clientSecret = process.env.CF_AccessClientSecret;
+
 import { createProxyMiddleware } from "http-proxy-middleware";
 // import requestIp from "request-ip";
 
@@ -76,9 +82,11 @@ app.use(
   createProxyMiddleware({
     target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
     changeOrigin:true,
-    ws: true,
-    secure: false,
-    pathRewrite: {"^/drive": "" }
+    pathRewrite: {"^/drive": "" },
+    headers: {
+      'CF-Access-Client-Id': clientID!,
+      'CF-Access-Client-Secret': clientSecret!,
+    }
   })
 )
 
