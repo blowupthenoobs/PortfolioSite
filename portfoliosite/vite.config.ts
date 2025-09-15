@@ -60,7 +60,7 @@ export default defineConfig(({ mode }) => {
               rewrite: (path) => path.replace(/^\/api/, ""),
             },
             "/drive": {
-              target: "fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
+              target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
               changeOrigin:true
             }
           }
