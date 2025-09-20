@@ -52,8 +52,8 @@ export default defineConfig(({ mode }) => {
     },
     envDir: "./src/config/",
     server: {
-      proxy: proxyURL
-        ? {
+      proxy:
+         {
             "/api": {
               target: proxyURL,
               changeOrigin: true,
@@ -61,11 +61,10 @@ export default defineConfig(({ mode }) => {
             },
             "/drive": {
               target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
-              changeOrigin:true
+              changeOrigin:true,
+              rewrite: (path) => path.replace(/^\/drive/, '/drive')
             }
-          }
-          
-        : undefined,
+          },
       host: "0.0.0.0", // makes it accessible from anywhere
       allowedHosts: ["drivingthetestdrive.blowupthenoobs.dev"], // ✅ allow your tunnel domain
     },
