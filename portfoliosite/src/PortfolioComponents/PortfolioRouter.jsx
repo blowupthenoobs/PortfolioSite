@@ -16,6 +16,7 @@ import {
 // import ResetPasswordPage from "../components/ResetPasswordPage/ResetPasswordPage";
 // import SettingsPage from "../components/SettingsPage/SettingsPage";
 import Homepage from "./MainPage";
+import Drive from "./Drive"
 // import { usePreferenceSetter } from "../hooks/preferenceSetter";
 // import useAccessTokenHandler from "../hooks/user";
 
@@ -55,7 +56,13 @@ const PortfolioRouter = () => {
         element={
           <Homepage/>
         }
-      />
+        />
+        <Route
+        path="/drive"
+        element={
+          <Drive/>
+        }
+        />
       </Routes>
     </BrowserRouter>
   );

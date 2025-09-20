@@ -58,11 +58,6 @@ export default defineConfig(({ mode }) => {
               target: proxyURL,
               changeOrigin: true,
               rewrite: (path) => path.replace(/^\/api/, ""),
-            },
-            "/drive": {
-              target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev/",
-              changeOrigin:true,
-              rewrite: (path) => path.replace(/^\/drive/, "")
             }
           },
       host: "0.0.0.0", // makes it accessible from anywhere
