@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import SectionPanel from "./SectionPanel"
 import HomePortfolioPage from "./HomePortfolioPage"
 import PorfolioHeader from "./PortfolioHeader"
+import BlogMenu from "./BlogMenu";
 import SecretsMenu from "./SecretsMenu";
 
 export default function MainPage() {
@@ -21,10 +22,14 @@ export default function MainPage() {
                         <>
                             <HomePortfolioPage/>
                         </>:
-                    currentPath === "/secrets"?
+                    currentPath === "/blogs"?
                         <>
-                            <SecretsMenu/>
+                            <BlogMenu/>
                         </>:
+                    currentPath === "/secrets"?
+                    <>
+                        <SecretsMenu/>
+                    </>:
                         <>
 
                         </>

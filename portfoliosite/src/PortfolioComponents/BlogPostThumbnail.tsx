@@ -1,0 +1,24 @@
+import { useLocation, useNavigate } from "react-router-dom";
+
+interface BlogPostThumbail {
+    Title: string;
+    BodyText: string;
+}
+
+const BlogPostThumbail: React.FC<BlogPostThumbail> = ({Title, BodyText}) => {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const sendToPage = () => {
+        // navigate(route);
+    }
+
+    return(
+        <div className={"bg-off-black text-blue-500 border-2 rounded-md border-blue-500 p-10 h-[40%] w-[30%]"} onClick={sendToPage}>
+            <h1 className="mr-2">{Title}</h1>
+            <p>{BodyText} ...</p>
+        </div>
+    )
+}
+
+export default BlogPostThumbail;
