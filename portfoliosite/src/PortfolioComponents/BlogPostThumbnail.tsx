@@ -14,8 +14,9 @@ const BlogPostThumbail: React.FC<BlogPostThumbail> = ({Title, BodyText}) => {
     }
 
     return(
-        <div className={"bg-off-black text-blue-500 border-2 rounded-md border-blue-500 p-10 h-[40%] w-[30%]"} onClick={sendToPage}>
-            <h1 className="mr-2">{Title}</h1>
+        <div className={"bg-off-black text-blue-500 border-2 rounded-md border-blue-500 p-10 min-h-[40%] max-h-[100%] w-[30%]"} onClick={sendToPage}>
+            <h1 className="text-lg">{Title}</h1>
+            <hr className="text-blue-500"/>
             <p>{BodyText} ...</p>
         </div>
     )
