@@ -27,7 +27,7 @@ export default function MainPage() {
                         <>
                             <BlogMenu/>
                         </>:
-                    currentPath === "/blogs"?
+                    currentPath === "/portfolio"?
                         <>
                             <PortfolioPiecesMenu/>
                         </>:
