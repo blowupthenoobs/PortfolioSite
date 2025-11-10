@@ -5,14 +5,6 @@ interface PortfolioSideTab {
     route: string;
 }
 
-// export default function PortfolioSideTab() {
-//     return (
-//         <div className="border-2 border-blue-500 p-1 border-l-0 mb-3 [writing-mode:vertical-lr]">
-//             <h1>Sides</h1>
-//         </div>
-//     )
-// }
-
 const PortfolioSideTab: React.FC<PortfolioSideTab> = ({Label, route}) => {
     const location = useLocation();
     const currentPath = location.pathname;
