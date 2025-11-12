@@ -2,9 +2,9 @@ export default function HomePortfolioPage() {
 
 const backend = process.env.BackEndLocation;
 const getData = async () => {
-    const res = await fetch("bdlaotwaubpatshienngoobs.blowupthenoobs.dev/select")
+    const res = await fetch(`${backend}/select`)
     console.log(res)
-
+    
 }
 
     getData();

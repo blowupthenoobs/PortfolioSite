@@ -12,7 +12,6 @@ export default function MainPage() {
     const location = useLocation();
     const currentPath = location.pathname;
 
-
     return (
         <div>
             <PorfolioHeader/>
