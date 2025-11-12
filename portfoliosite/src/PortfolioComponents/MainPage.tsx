@@ -18,7 +18,7 @@ export default function MainPage() {
             <PorfolioHeader/>
             <div className="bg-bg-dark-grey flex ml-[100px] mt-10 w-full">
                 <SectionPanel/>
-                <div className="bg-off-black w-[calc(100%-200px)] h-[60vh] min-h-[500px] border-2 border-blue-500 p-2 grid">
+                <div className="bg-off-black w-[calc(100%-225px)] h-[60vh] min-h-[500px] border-2 border-blue-500 p-2 grid">
                     {currentPath === "/"?
                         <>
                             <HomePortfolioPage/>

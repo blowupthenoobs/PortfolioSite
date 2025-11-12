@@ -77,19 +77,6 @@ app.use(userRouter, fileRouter, folderRouter);
 
 app.use(middlewareErrorHandler);
 
-app.use(
-  "/drive",
-  createProxyMiddleware({
-    target: "https://fbalkoewguopotghleendoroibvse.blowupthenoobs.dev",
-    changeOrigin:true,
-    pathRewrite: {"^/drive": "" },
-    headers: {
-      'CF-Access-Client-Id': clientID!,
-      'CF-Access-Client-Secret': clientSecret!,
-    }
-  })
-)
-
 //const nodeMode = process.env.NODE_ENV ? "Production" : "Development/Testing";
 
 //console.log("Node Enviroment Mode:", nodeMode);
