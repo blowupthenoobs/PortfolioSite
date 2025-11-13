@@ -1,6 +1,6 @@
 export default function HomePortfolioPage() {
 
-const backend = process.env.BackEndLocation;
+const backend = import.meta.env.BackEndLocation;
 console.log(backend)
 const getData = async () => {
     const res = await fetch(`${backend}/select`)
