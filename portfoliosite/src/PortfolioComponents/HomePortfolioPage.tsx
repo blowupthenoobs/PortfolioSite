@@ -2,8 +2,9 @@ export default function HomePortfolioPage() {
 
 const backend = import.meta.env.VITE_BackEndLocation;
 const getData = async () => {
+    console.log("starting")
     try{
-
+        console.log("is trying")
         const res = await fetch(`${backend}/select`)
         console.log(res)
         const data = await res.json();
