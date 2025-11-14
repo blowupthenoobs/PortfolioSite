@@ -6,7 +6,6 @@ const getData = async () => {
     try{
         console.log("is trying")
         const res = await fetch(`${backend}/select`)
-        console.log(res)
         const data = await res.json();
         console.log(data)
     } catch(err) {
