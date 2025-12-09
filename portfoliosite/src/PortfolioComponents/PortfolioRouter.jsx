@@ -6,7 +6,7 @@ import {
 //   Navigate,
 //   useLocation,
 } from "react-router-dom";
-// import LoginPage from "../components/LoginPage/LoginPage";
+import LoginPage from "../components/LoginPage/LoginPage";
 // import HomePage from "../components/Homepage/Homepage";
 // import PrivateRoute from "./PrivateRoute";
 // import PublicRoute from "./PublicRoute";
@@ -61,6 +61,12 @@ const PortfolioRouter = () => {
         path="/drive"
         element={
           <Drive/>
+        }
+        />
+        <Route
+        path="/login"
+        element={
+          <LoginPage/>
         }
         />
       </Routes>
