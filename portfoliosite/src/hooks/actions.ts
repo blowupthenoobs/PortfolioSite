@@ -117,7 +117,7 @@ export const useActions = ({ quickItemMode }: UseActionsProps) => {
 
         // if (parentBarMode) {
         //   if (folder.parent === "/") {
-        //     navigate("/drive/home");
+        //     navigate("/");
         //   } else {
         //     navigate(`/drive/folder/${folder.parent}`);
         //   }

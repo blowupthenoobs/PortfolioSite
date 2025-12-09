@@ -67,7 +67,7 @@ const SearchBar = memo(() => {
       if (searchText.length) {
         navigate(`/drive/search/${searchText}`);
       } else {
-        navigate("/drive/home");
+        navigate("/");
       }
     }
   };

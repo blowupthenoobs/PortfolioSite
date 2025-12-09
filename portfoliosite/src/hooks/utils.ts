@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 export const useUtils = () => {
   const location = useLocation();
 
-  const isHome = location.pathname === "/drive/home";
+  const isHome = location.pathname === "/";
 
   const isTrash =
     location.pathname === "/drive/trash" ||
