@@ -54,7 +54,7 @@ const LoginPage = () => {
       const loginResponse = await loginAPI(email, password);
       window.localStorage.setItem("hasPreviouslyLoggedIn", "true");
       dispatch(setUser(loginResponse));
-      navigate("/drive/home");
+      navigate("/");
       setLoadingLogin(false);
     } catch (e) {
       if (
