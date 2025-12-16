@@ -1,6 +1,6 @@
 const getBackendURL = () => {
   // @ts-ignore
-  const envURL = import.meta.env.VITE_BACKEND_URL;
+  const envURL = import.meta.env.VITE_BackEndLocation; //import.meta.env.VITE_BACKEND_URL was the old marking
 
   if (envURL) {
     return envURL;

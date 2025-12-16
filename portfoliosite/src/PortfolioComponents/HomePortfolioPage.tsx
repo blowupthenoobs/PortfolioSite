@@ -1,6 +1,8 @@
+import getBackendURL from "../utils/getBackendURL";
+
 export default function HomePortfolioPage() {
 
-const backend = import.meta.env.VITE_BackEndLocation;
+const backend = getBackendURL();
 const getData = async () => {
     console.log("starting")
     try{
