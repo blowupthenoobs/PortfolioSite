@@ -27,8 +27,9 @@ export const loginAPI = async (email: string, password: string) => {
   return response.data;
 };
 
-export const createAccountAPI = async (email: string, password: string) => {
+export const createAccountAPI = async (username: string, email: string, password: string) => {
   const response = await axios.post("/user-service/create", {
+    username,
     email,
     password,
   });

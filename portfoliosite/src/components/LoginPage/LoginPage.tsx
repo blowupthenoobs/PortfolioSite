@@ -17,6 +17,7 @@ import { AxiosError } from "axios";
 import isEmail from "validator/es/lib/isEmail";
 
 const LoginPage = () => {
+  const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [verifyPassword, setVerifyPassword] = useState("");
@@ -73,7 +74,7 @@ const LoginPage = () => {
   const createAccount = async () => {
     try {
       setLoadingLogin(true);
-      const createAccountResponse = await createAccountAPI(email, password);
+      const createAccountResponse = await createAccountAPI(username, email, password);
       window.localStorage.setItem("hasPreviouslyLoggedIn", "true");
 
       if (createAccountResponse.emailSent) {
@@ -247,6 +248,29 @@ const LoginPage = () => {
             <p className="text-primary font-medium text-[25px] mt-0 mb-[15px] text-center">
               {headerTitle}
             </p>
+            {/* Username */}
+            {(mode === "login" || mode === "create") && (
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Username"
+                  className="w-full h-[48px] pl-[12px] pr-[70px] text-black border border-grey-hover rounded-[5px] outline-none text-[15px] mt-4"
+                  onChange={(e) => setUsername(e.target.value)}
+                  value={password}
+                />
+                {mode === "login" && (
+                  <div className="absolute right-0 top-0 bottom-0 flex items-center justify-center">
+                    <a
+                      className="text-[#3c85ee] text-[15px] font-medium no-underline mr-2 mt-4"
+                      onClick={() => setMode("reset")}
+                    >
+                      Forgot?
+                    </a>
+                  </div>
+                )}
+              </div>
+            )}
+
             {/* Email Address */}
             <input
               type="text"
