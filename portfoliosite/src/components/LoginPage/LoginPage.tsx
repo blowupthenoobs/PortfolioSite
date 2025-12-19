@@ -139,7 +139,7 @@ const LoginPage = () => {
       case "login":
         return !email || !password;
       case "create":
-        return !email || !password || !verifyPassword;
+        return !username || !email || !password || !verifyPassword;
       case "reset":
         return !email;
       default:
@@ -248,6 +248,15 @@ const LoginPage = () => {
             <p className="text-primary font-medium text-[25px] mt-0 mb-[15px] text-center">
               {headerTitle}
             </p>
+            {/* Username */}
+            {mode === "create" && (
+              <input
+                type="text"
+                placeholder="Username"
+                className="w-full h-[48px] pl-[12px] pr-[12px] text-black border border-[#637381] rounded-[5px] outline-none text-[15px] mt-4"
+                onChange={(e) => setUsername(e.target.value)}
+              />
+            )}
             {/* Username */}
             {(mode === "login" || mode === "create") && (
               <div className="relative">
