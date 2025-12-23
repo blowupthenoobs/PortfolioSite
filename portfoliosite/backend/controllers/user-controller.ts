@@ -45,6 +45,7 @@ class UserController {
 
   login = async (req: RequestType, res: Response, next: NextFunction) => {
     try {
+      console.log("running login script");
       const body = req.body;
 
       const currentUUID = req.headers.uuid as string;
