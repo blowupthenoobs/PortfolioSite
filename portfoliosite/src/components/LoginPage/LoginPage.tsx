@@ -253,16 +253,16 @@ const LoginPage = () => {
               <input
                 type="text"
                 placeholder="Username"
-                className="w-full h-[48px] pl-[12px] pr-[12px] text-black border border-[#637381] rounded-[5px] outline-none text-[15px] mt-4"
+                className="w-full h-[48px] pl-[12px] pr-[12px] text-black border border-[#637381] rounded-[5px] outline-none text-[15px]"
                 onChange={(e) => setUsername(e.target.value)}
               />
             )}
-            
+
             {/* Email Address */}
             <input
               type="text"
               placeholder="Email address"
-              className="w-full h-[48px] pl-[12px] pr-[12px] text-black border border-grey-hover rounded-[5px] outline-none text-[15px]"
+              className="w-full h-[48px] pl-[12px] pr-[12px] text-black border border-grey-hover rounded-[5px] outline-none text-[15px] mt-4"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
