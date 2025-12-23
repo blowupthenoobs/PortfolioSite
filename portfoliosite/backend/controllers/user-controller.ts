@@ -55,6 +55,10 @@ class UserController {
         currentUUID
       );
 
+      console.log(user);
+      console.log(accessToken);
+      console.log(refreshToken);
+
       createLoginCookie(res, accessToken, refreshToken);
 
       res.status(200).send({ user });
