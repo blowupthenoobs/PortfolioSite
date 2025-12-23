@@ -19,7 +19,7 @@ export const getUserDetailedAPI = async () => {
 
 // POST
 
-export const loginAPI = async (email: string, password: string) => {
+export const loginAPI = async (email: string, password: string) => { //Realized that anything beyond this file can be ignored do to my rerouting
   const response = await axios.post("/user-service/login", {
     email,
     password,

@@ -25,6 +25,16 @@ const getData = async () => {
         console.error('Insertion Failed: ', err)
     }
 
+    try{
+        const payload = {
+            email: "jeremiah12250@gmail.com"
+        }
+        console.log(axios.post(`${backend}/user-service/get-by-creds`, payload))
+    } catch(err)
+    {
+        console.error('Insertion Failed: ', err)
+    }
+
 
 }
 

@@ -45,7 +45,6 @@ class UserController {
 
   login = async (req: RequestType, res: Response, next: NextFunction) => {
     try {
-      console.log("running login script");
       const body = req.body;
 
       const currentUUID = req.headers.uuid as string;
@@ -54,10 +53,6 @@ class UserController {
         body,
         currentUUID
       );
-
-      console.log(user);
-      console.log(accessToken);
-      console.log(refreshToken);
 
       createLoginCookie(res, accessToken, refreshToken);
 
