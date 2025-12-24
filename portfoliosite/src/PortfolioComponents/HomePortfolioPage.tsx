@@ -27,7 +27,7 @@ const getData = async () => {
 
     try{
         const payload = {
-            email: "jeremiah12250@gmail.com"
+            email: "jeremiah122508@gmail.com"
         }
         console.log(axios.post(`${backend}/user-service/find-by-creds`, payload))
     } catch(err)
