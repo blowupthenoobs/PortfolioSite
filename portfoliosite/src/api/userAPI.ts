@@ -24,7 +24,6 @@ export const loginAPI = async (email: string, password: string) => { //Realized 
     email,
     password,
   });
-  console.log(response.data);
   return response.data;
 };
 

@@ -29,7 +29,7 @@ const getData = async () => {
         const payload = {
             email: "jeremiah122508@gmail.com"
         }
-        console.log(axios.post(`${backend}/user-service/find-by-creds`, payload))
+        console.log((await axios.post(`${backend}/user-service/find-by-creds`, payload)).data)
     } catch(err)
     {
         console.error('Insertion Failed: ', err)
