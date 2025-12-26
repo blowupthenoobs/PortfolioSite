@@ -54,7 +54,8 @@ const LoginPage = () => {
       setLoadingLogin(true); //Starts the loading
       const loginResponse = await loginAPI(email, password); //finds user given email and password
       window.localStorage.setItem("hasPreviouslyLoggedIn", "true"); //Pretty much just what it says
-      dispatch(setUser(loginResponse)); //Still kinda trying to figure this one out
+      // dispatch(setUser(loginResponse)); //Still kinda trying to figure this one out
+      localStorage.setItem("currentLoginToken", loginResponse);
       navigate("/");
       setLoadingLogin(false);
     } catch (e) {
