@@ -32,7 +32,7 @@ app.use(cookieParser(env.passwordCookie));
 app.use(helmet());
 app.use(compression());
 app.use(express.json());
-app.use(express.static(publicPath, { index: false }));
+app.use(express.static(publicPath));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(
   bodyParser.urlencoded({
