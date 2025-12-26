@@ -12,6 +12,7 @@ import LoginPage from "../components/LoginPage/LoginPage";
 import Homepage from "./MainPage";
 import Drive from "./Drive"
 import Welcome from "./WelcomePage"
+import HackClub from "./HackClubMessage"
 
 const PortfolioRouter = () => {
   return (
@@ -64,6 +65,12 @@ const PortfolioRouter = () => {
         path="/welcome"
         element={
           <Welcome/>
+        }
+        />
+        <Route
+        path="/hackclub"
+        element={
+          <HackClub/>
         }
         />
       </Routes>

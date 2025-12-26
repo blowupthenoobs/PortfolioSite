@@ -16,34 +16,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 dotenv.config();
 
-const clientID = process.env.CF_AccessClientId;
-const clientSecret = process.env.CF_AccessClientSecret;
-
-import { createProxyMiddleware } from "http-proxy-middleware";
-// import requestIp from "request-ip";
 
 const app = express();
 const publicPath = path.join(__dirname, "..", "..", "dist-frontend");
 
 let server: any;
 let serverHttps: any;
-
-if (process.env.SSL === "true") {
-  const certPath = env.httpsCrtPath || "certificate.crt"
-  const caPath = env.httpsCaPath || "certificate.ca-bundle"
-  const keyPath = env.httpsKeyPath || "certificate.key"
-  const cert = fs.readFileSync(certPath);
-  const ca = fs.readFileSync(caPath);
-  const key = fs.readFileSync(keyPath);
-
-  const options = {
-    cert,
-    ca,
-    key,
-  };
-
-  serverHttps = https.createServer(options, app);
-}
 
 server = http.createServer(app);
 
@@ -74,10 +52,6 @@ app.use(
 app.use(userRouter);
 
 app.use(middlewareErrorHandler);
-
-//const nodeMode = process.env.NODE_ENV ? "Production" : "Development/Testing";
-
-//console.log("Node Enviroment Mode:", nodeMode);
 
 app.get("*", (_: Request, res: Response) => {
   res.sendFile(path.join(publicPath, "index.html"));
