@@ -2,8 +2,6 @@ import express, { Request, Response } from "express";
 import path from "path";
 import userRouter from "../express-routers/user-router";
 import bodyParser from "body-parser";
-import https from "https";
-import fs from "fs";
 import helmet from "helmet";
 import busboy from "connect-busboy";
 import compression from "compression";
