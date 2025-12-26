@@ -81,10 +81,9 @@ app.use(middlewareErrorHandler);
 
 //console.log("Node Enviroment Mode:", nodeMode);
 
-if (process.env.NODE_ENV === "production") {
-  app.get("*", (_: Request, res: Response) => {
-    res.sendFile(path.join(publicPath, "index.html"));
-  });
-}
+app.get("*", (_: Request, res: Response) => {
+  res.sendFile(path.join(publicPath, "index.html"));
+});
+
 
 export default { server, serverHttps };

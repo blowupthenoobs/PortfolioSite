@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import LoginPage from "../components/LoginPage/LoginPage";
 
-//Stuff all by me:
+//Stuff completely by me:
 import Homepage from "./MainPage";
 import Drive from "./Drive"
 import Welcome from "./WelcomePage"
