@@ -14,7 +14,6 @@ const PortfolioHeader: React.FC<PortfolioHeader> = ({height = "15vh"}) => {
                 token: localStorage.getItem("currentLoginToken"),
             }
             const response = await axios.post(`${backend}/user-service/refresh-login-token`, payload)
-            console.log(response)
             localStorage.setItem("currentLoginToken", response.data)
         } catch(err)
         {
