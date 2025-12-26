@@ -32,7 +32,7 @@ app.use(cookieParser(env.passwordCookie));
 app.use(helmet());
 app.use(compression());
 app.use(express.json());
-app.use(express.static(publicPath));
+app.use(express.static(publicPath, { index: false }));
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -41,7 +41,6 @@ app.use(
     parameterLimit: 50000,
   })
 );
-// app.use(requestIp.mw());
 
 app.use(
   busboy({
@@ -54,7 +53,7 @@ app.use(userRouter);
 app.use(middlewareErrorHandler);
 
 app.get("*", (_: Request, res: Response) => {
-  res.sendFile(path.join(publicPath, "index.html"));
+  res.sendFile(path.resolve(publicPath, "index.html"));
 });
 
 
