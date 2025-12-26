@@ -82,7 +82,9 @@ const LoginPage = () => {
         toast.success("Email Verification Sent");
       }
 
-      dispatch(setUser(createAccountResponse.user));
+      localStorage.setItem("currentLoginToken", createAccountResponse.data);
+      dispatch(setLoggedIn());
+
       navigate("/");
       setLoadingLogin(false);
     } catch (e) {
