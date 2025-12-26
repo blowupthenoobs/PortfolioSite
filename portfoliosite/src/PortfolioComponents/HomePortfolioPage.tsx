@@ -25,15 +25,15 @@ const getData = async () => {
     //     console.error('Insertion Failed: ', err)
     // }
 
-    try{
-        const payload = {
-            email: "jeremiah122508@gmail.com"
-        }
-        console.log((await axios.post(`${backend}/user-service/find-by-creds`, payload)).data)
-    } catch(err)
-    {
-        console.error('Insertion Failed: ', err)
-    }
+    // try{
+    //     const payload = {
+    //         email: "jeremiah122508@gmail.com"
+    //     }
+    //     console.log((await axios.post(`${backend}/user-service/find-by-creds`, payload)).data)
+    // } catch(err)
+    // {
+    //     console.error('Insertion Failed: ', err)
+    // }
 
 
 }

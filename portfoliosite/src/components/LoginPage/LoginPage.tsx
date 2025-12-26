@@ -51,10 +51,10 @@ const LoginPage = () => {
 
   const login = async () => {
     try {
-      setLoadingLogin(true);
-      const loginResponse = await loginAPI(email, password);
-      window.localStorage.setItem("hasPreviouslyLoggedIn", "true");
-      dispatch(setUser(loginResponse));
+      setLoadingLogin(true); //Starts the loading
+      const loginResponse = await loginAPI(email, password); //finds user given email and password
+      window.localStorage.setItem("hasPreviouslyLoggedIn", "true"); //Pretty much just what it says
+      dispatch(setUser(loginResponse)); //Still kinda trying to figure this one out
       navigate("/");
       setLoadingLogin(false);
     } catch (e) {
