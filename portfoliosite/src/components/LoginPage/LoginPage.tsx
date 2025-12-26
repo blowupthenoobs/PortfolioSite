@@ -56,7 +56,7 @@ const LoginPage = () => {
       window.localStorage.setItem("hasPreviouslyLoggedIn", "true"); //Pretty much just what it says
       localStorage.setItem("currentLoginToken", loginResponse);
       dispatch(setLoggedIn());
-      navigate("/");
+      navigate("/welcome");
       setLoadingLogin(false);
     } catch (e) {
       if (
@@ -85,7 +85,7 @@ const LoginPage = () => {
       localStorage.setItem("currentLoginToken", createAccountResponse.data);
       dispatch(setLoggedIn());
 
-      navigate("/");
+      navigate("/welcome");
       setLoadingLogin(false);
     } catch (e) {
       if (e instanceof AxiosError && e.response?.status === 409) {

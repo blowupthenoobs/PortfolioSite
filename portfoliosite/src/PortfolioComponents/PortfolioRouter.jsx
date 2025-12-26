@@ -7,20 +7,11 @@ import {
 //   useLocation,
 } from "react-router-dom";
 import LoginPage from "../components/LoginPage/LoginPage";
-// import HomePage from "../components/Homepage/Homepage";
-// import PrivateRoute from "./PrivateRoute";
-// import PublicRoute from "./PublicRoute";
-// import DownloadPage from "../components/DownloadPage/DownloadPage";
-// import VerifyEmailPage from "../components/VerifyEmailPage/VerifyEmailPage";
-// import uuid from "uuid";
-// import ResetPasswordPage from "../components/ResetPasswordPage/ResetPasswordPage";
-// import SettingsPage from "../components/SettingsPage/SettingsPage";
+
+//Stuff all by me:
 import Homepage from "./MainPage";
 import Drive from "./Drive"
-// import { usePreferenceSetter } from "../hooks/preferenceSetter";
-// import useAccessTokenHandler from "../hooks/user";
-
-// export const history = createHistory();
+import Welcome from "./WelcomePage"
 
 const PortfolioRouter = () => {
   return (
@@ -67,6 +58,12 @@ const PortfolioRouter = () => {
         path="/login"
         element={
           <LoginPage/>
+        }
+        />
+        <Route
+        path="/welcome"
+        element={
+          <Welcome/>
         }
         />
       </Routes>
