@@ -2,7 +2,30 @@ interface PortfolioHeader {
     height?: string;
 }
 
+import axios from "axios";
+import getBackendURL from "../utils/getBackendURL";
+
+
 const PortfolioHeader: React.FC<PortfolioHeader> = ({height = "15vh"}) => {
+    const backend = getBackendURL();
+    const getData = async () => {
+        try{
+            const payload = {
+                token: localStorage.getItem("currentLoginToken"),
+            }
+            const response = await axios.post(`${backend}/user-service/refresh-login-token`, payload)
+            console.log(response)
+            localStorage.setItem("currentLoginToken", response.data)
+        } catch(err)
+        {
+            console.error('Refresh Failed: ', err)
+        }
+
+
+    }
+
+    getData();
+
     return (
         <div className="bg-bg-grey w-full max-h-[15vh] h-[full] border-b-2 border-blue-500" style={{height}}>     {/*w-1/2 is w-[50%], w-full is same as w-[100%]*/}
             <div className="flex w-fit m-auto h-full items-center"> 
