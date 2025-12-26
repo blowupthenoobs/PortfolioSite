@@ -24,9 +24,12 @@ const userSlice = createSlice({
     setLastRefreshed: (state) => {
       state.lastRefreshed = Date.now();
     },
+    setLoggedIn: (state) => {
+      state.loggedIn = true;
+    }
   },
 });
 
-export const { setUser, setLastRefreshed } = userSlice.actions;
+export const { setUser, setLastRefreshed, setLoggedIn } = userSlice.actions;
 
 export default userSlice.reducer;

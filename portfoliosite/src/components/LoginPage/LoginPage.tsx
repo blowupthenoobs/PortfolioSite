@@ -6,7 +6,7 @@ import {
   sendPasswordResetAPI,
 } from "../../api/userAPI";
 import { useLocation, useNavigate } from "react-router-dom";
-import { setUser } from "../../reducers/user";
+import { setUser, setLoggedIn } from "../../reducers/user";
 import { useAppDispatch } from "../../hooks/store";
 import capitalize from "lodash/capitalize";
 import AlertIcon from "../../icons/AlertIcon";
@@ -54,8 +54,8 @@ const LoginPage = () => {
       setLoadingLogin(true); //Starts the loading
       const loginResponse = await loginAPI(email, password); //finds user given email and password
       window.localStorage.setItem("hasPreviouslyLoggedIn", "true"); //Pretty much just what it says
-      // dispatch(setUser(loginResponse)); //Still kinda trying to figure this one out
       localStorage.setItem("currentLoginToken", loginResponse);
+      dispatch(setLoggedIn()); //Still kinda trying to figure this one out
       navigate("/");
       setLoadingLogin(false);
     } catch (e) {
