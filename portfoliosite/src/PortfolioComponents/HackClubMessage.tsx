@@ -1,6 +1,6 @@
 import PortfolioHeader from "./PortfolioHeader";
 
-export default function PortfolioPiecesMenu() {
+export default function HackClubMessage() {
 
     const parenthesesedText = [
         "(namely the ones that are going to be judging this)",
