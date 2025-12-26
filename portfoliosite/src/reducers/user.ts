@@ -25,6 +25,7 @@ const userSlice = createSlice({
       state.lastRefreshed = Date.now();
     },
     setLoggedIn: (state) => {
+      console.log("firing setLoggedIn");
       state.loggedIn = true;
     }
   },
