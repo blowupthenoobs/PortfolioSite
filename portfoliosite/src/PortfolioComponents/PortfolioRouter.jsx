@@ -58,7 +58,7 @@ const PortfolioRouter = () => {
         <Route
         path="/login"
         element={
-          <LoginPage/>
+          <Welcome/>
         }
         />
         <Route
