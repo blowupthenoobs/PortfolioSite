@@ -9,20 +9,22 @@ export default function RouteBumper()  {
     const navigate = useNavigate();
 
     useEffect(() => {
+        console.log("running");
         const checkPerms = async() => {
             const payload = {
                 token:  localStorage.getItem("currentLoginToken"),
                 route: location.pathname
             }
-
-            const perms = (await axios.post(`${backend}/check-perms-for-route`, payload)).data
+            
+            const perms = await (await axios.post(`${backend}/check-perms-for-route`, payload)).data
+            console.log("sent payload");
 
             if(perms !== "hasPerms")
                 navigate("/");
         }
         
         checkPerms();
-    })
+    }, [location, navigate, backend])
 
     return null
 };
