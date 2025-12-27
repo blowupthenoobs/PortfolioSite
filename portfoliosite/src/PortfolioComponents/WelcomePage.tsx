@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
+import RouteBumper from "./RouteBumper";
 
 export default function PortfolioPiecesMenu() {
     const navigate = useNavigate();
+    RouteBumper();
 
     const BackToHomePage = () => {
         navigate("/");
