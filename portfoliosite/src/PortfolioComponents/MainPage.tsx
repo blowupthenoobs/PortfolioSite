@@ -26,7 +26,7 @@ export default function MainPage() {
                         <>
                             <BlogMenu/>
                         </>:
-                    currentPath.startsWith("/portfolio") ?
+                    currentPath === "/portfolio" || currentPath.startsWith("/portfolio/") ?
                         <>
                             <PortfolioPiecesMenu/>
                         </>:
