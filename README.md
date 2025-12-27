@@ -10,4 +10,4 @@ To run the first part of the website, after downloading it, you will want to cd 
 
 The second part, the MySQL Database is rather straightforward to use, after downloading it, all you should need to do, assuming you have the basic MySQL stuff on your computer is run "node index.js" to start the database server.
 
-The third section is technically optional, however you might then want to remove the /drive directory and such (as well as the Drive component.) If you intend on copying it anyways,
+The third section is technically optional, however you might then want to remove the /drive directory and such (as well as the Drive component.) If you intend on copying it anyways, the instructions you need to follow should be found at (https://github.com/subnub/myDrive) however it's worth noting that my changes require you to make it an FS server (ie. you can't use the amazon s3 thing. If you're running this, u prob don't need it anyhow I don't think.)

@@ -14,6 +14,6 @@ export default async function RouteBumper()  {
 
     const perms = (await axios.post(`${backend}/check-perms-for-route`, payload)).data
 
-    if(perms == "bump")
+    if(perms !== "hasPerms")
         navigate("/");
 };
