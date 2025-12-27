@@ -31,22 +31,22 @@ const LoginPage = () => {
   const lastSentPassowordReset = useRef(0);
 
   const attemptLoginWithToken = async () => {
-    setAttemptingLogin(true);
+    // setAttemptingLogin(true);
 
-    try {
-      const userResponse = await getUserAPI();
+    // try {
+    //   const userResponse = await getUserAPI();
 
-      const redirectPath = location.state?.from?.pathname || "/";
-      dispatch(setUser(userResponse));
-      navigate(redirectPath);
-      window.localStorage.setItem("hasPreviouslyLoggedIn", "true");
-    } catch (e) {
-      setAttemptingLogin(false);
-      if (window.localStorage.getItem("hasPreviouslyLoggedIn")) {
-        setError("Login Expired");
-        window.localStorage.removeItem("hasPreviouslyLoggedIn");
-      }
-    }
+    //   const redirectPath = location.state?.from?.pathname || "/";
+    //   dispatch(setUser(userResponse));
+    //   navigate(redirectPath);
+    //   window.localStorage.setItem("hasPreviouslyLoggedIn", "true");
+    // } catch (e) {
+    //   setAttemptingLogin(false);
+    //   if (window.localStorage.getItem("hasPreviouslyLoggedIn")) {
+    //     setError("Login Expired");
+    //     window.localStorage.removeItem("hasPreviouslyLoggedIn");
+    //   }
+    // }
   };
 
   const login = async () => {
@@ -215,12 +215,12 @@ const LoginPage = () => {
   }, [email.length, password.length, verifyPassword.length]);
 
   useEffect(() => {
-    // const loggedIn = window.localStorage.getItem("hasPreviouslyLoggedIn");
-    // if (loggedIn === "true") {
-    //   attemptLoginWithToken();
-    // } else {
-    // }
-    setAttemptingLogin(false);
+    const loggedIn = window.localStorage.getItem("hasPreviouslyLoggedIn");
+    if (loggedIn === "true") {
+      attemptLoginWithToken();
+    } else {
+      setAttemptingLogin(false);
+    }
   }, []);
 
   if (attemptingLogin) {
