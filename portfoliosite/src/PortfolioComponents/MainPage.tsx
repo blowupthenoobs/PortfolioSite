@@ -35,7 +35,7 @@ export default function MainPage() {
                         <SecretsMenu/>
                     </>:
                     <>
-
+                        <p>you weren't supposed to find this</p>
                     </>
                     }
                 </div>
