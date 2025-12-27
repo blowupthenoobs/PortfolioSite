@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  Switch,
 //   Navigate,
 //   useLocation,
 } from "react-router-dom";
