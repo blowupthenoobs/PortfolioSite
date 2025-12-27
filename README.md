@@ -2,7 +2,8 @@ A silly little portfolio site I've been working on for awhile. Fully Equipped wi
 
 If you wish to run this website on your computer, you may want to note that there are 3 different parts to it:
     1.) This wesbite you see here
-    2.) MySQL DataBase (https://)
+    2.) MySQL DataBase (https://github.com/blowupthenoobs/Databasing)
+    3.) My myDrive Reskin (https://github.com/blowupthenoobs/driveCloneThing)
 
 
 
