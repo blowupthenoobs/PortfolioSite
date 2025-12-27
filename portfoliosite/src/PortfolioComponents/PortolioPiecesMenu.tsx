@@ -27,7 +27,7 @@ export default function PortfolioPiecesMenu() {
                 <h1 className="bg-bg-dark-grey border-2 rounded-md border-blue-500 p-3 min-h-[20%] max-h-[40%] w-[10%] text-[20px] cursor-pointer" onClick={OpenArt}>Art</h1>
                 <h1 className="bg-bg-dark-grey border-2 rounded-md border-blue-500 p-3 min-h-[20%] max-h-[40%] w-[10%] text-[20px] cursor-pointer" onClick={OpenModels}>Models</h1>
             </div>
-            <div className="mt-5 grid place-content-center">
+            <div className="mt-5 grid place-content-center text-center">
                 {currentPath.endsWith("/games")?
                     <>
                         <GamesPortfolio/>
