@@ -22,7 +22,7 @@ export default function RouteBumper()  {
         }
         
         checkPerms();
-    }, [location, navigate, backend])
+    })
 
     return null
 };
