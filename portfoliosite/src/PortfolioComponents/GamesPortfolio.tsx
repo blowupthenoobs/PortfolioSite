@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function PortfolioPiecesMenu() {
     interface iframeDetails {
         source: string;
@@ -28,30 +30,14 @@ export default function PortfolioPiecesMenu() {
         }
     ]
 
-    let selected = 0;
+    const [selected, moveSelected] = useState(0);
 
     const switchGameForward = () => {
-        selected++;
-
-        if(selected >= game.length)
-        {
-            while(selected >= game.length)
-            {
-                selected -= game.length;
-            }
-        }
+        moveSelected(prev => (prev +1) % game.length)
     }
 
     const switchGameBack = () => {
-        selected--;
-
-        if(selected < 0)
-        {
-            while(selected < game.length)
-            {
-                selected += game.length;
-            }
-        }
+        moveSelected(prev => (prev + 1 + game.length) % game.length)
     }
 
     return (
