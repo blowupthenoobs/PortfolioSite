@@ -18,7 +18,7 @@ const PortfolioRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <switch>
+        <Switch>
         <Route
           path="/"
           exact={true}
@@ -80,7 +80,7 @@ const PortfolioRouter = () => {
           <Welcome/>
         }
         />
-        </switch>
+        </Switch>
       </Routes>
     </BrowserRouter>
   );
