@@ -5,7 +5,7 @@ export default function HackClubMessage() {
     return (
         <div>
             <PortfolioHeader/>
-            <div className="ml-10">
+            <div className="ml-10 text-primary mt-5">
                 <h3>This is my secret message for the hack-clubbers</h3>
                 <p>(namely the ones that are going to be judging this)</p>
                 <br/>

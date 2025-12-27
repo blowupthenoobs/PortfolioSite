@@ -25,25 +25,25 @@ const PortfolioRouter = () => {
           }
         />
         <Route
-          path="/blogs"
+          path="/blogs/*"
           element={
             <Homepage/>
           }
         />
         <Route
-          path="/snippets"
+          path="/snippets/*"
           element={
             <Homepage/>
           }
         />
         <Route
-          path="/portfolio"
+          path="/portfolio/*"
           element={
             <Homepage/>
           }
         />
         <Route
-        path="/secrets"
+        path="/secrets/*"
         element={
           <Homepage/>
         }
