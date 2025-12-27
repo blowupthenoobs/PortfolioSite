@@ -1,6 +1,13 @@
+import { useNavigate } from "react-router-dom";
+
 import PortfolioHeader from "./PortfolioHeader";
 
 export default function HackClubMessage() {
+    const navigate = useNavigate();
+
+    const BackToHomePage = () => {
+        navigate("/");
+    }
 
     return (
         <div>
@@ -15,6 +22,8 @@ export default function HackClubMessage() {
                     <li>accounting (will make some of the other secrets accessable)</li>
                     <li>drive (this stuff is not going to be open to everyone after I finish working on it, but most of my time was spent on here trying to make edits to the source code <a>github.com/subnub/myDrive</a>, tho my mongo Atlas thing is currently down for an unknown reason, and thus cannot be used. Source code should work just fine tho)</li>
                 </ul>
+                <br/>
+                <p>Here's the way <a onClick={BackToHomePage} className="text-green-400">back to the main site</a></p>
             </div>
             
         </div>
