@@ -18,9 +18,9 @@ const PortfolioRouter = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* <Route path="/" exact={true} element={<LoginPage />} /> */}
         <Route
           path="/"
+          exact={true}
           element={
             <Homepage/>
           }
@@ -71,6 +71,12 @@ const PortfolioRouter = () => {
         path="/hackclub"
         element={
           <HackClub/>
+        }
+        />
+        <Route
+        path="/*"
+        element={
+          <Welcome/>
         }
         />
       </Routes>
