@@ -3,7 +3,7 @@ import PortfolioHeader from "./PortfolioHeader";
 export default function HackClubMessage() {
 
     return (
-        <div className="">
+        <div className="ml-10">
             <PortfolioHeader/>
             <h3>This is my secret message for the hack-clubbers</h3>
             <p>(namely the ones that are going to be judging this)</p>
