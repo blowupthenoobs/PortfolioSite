@@ -9,10 +9,10 @@ import {
 import LoginPage from "../components/LoginPage/LoginPage";
 
 //Stuff completely by me:
-import Homepage from "./PortfolioComponents/MainPage";
-import Drive from "./PortfolioComponents/Drive"
-import Welcome from "./PortfolioComponents/WelcomePage"
-import HackClub from "./PortfolioComponents/HackClubMessage"
+import Homepage from "./MainPage";
+import Drive from "./Drive"
+import Welcome from "./WelcomePage"
+import HackClub from "./HackClubMessage"
 
 const PortfolioRouter = () => {
   return (
