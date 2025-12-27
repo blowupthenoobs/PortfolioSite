@@ -215,12 +215,12 @@ const LoginPage = () => {
   }, [email.length, password.length, verifyPassword.length]);
 
   useEffect(() => {
-    const loggedIn = window.localStorage.getItem("hasPreviouslyLoggedIn");
-    if (loggedIn === "true") {
-      attemptLoginWithToken();
-    } else {
-      setAttemptingLogin(false);
-    }
+    // const loggedIn = window.localStorage.getItem("hasPreviouslyLoggedIn");
+    // if (loggedIn === "true") {
+    //   attemptLoginWithToken();
+    // } else {
+    // }
+    setAttemptingLogin(false);
   }, []);
 
   if (attemptingLogin) {
