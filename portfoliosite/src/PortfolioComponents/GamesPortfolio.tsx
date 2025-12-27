@@ -55,11 +55,14 @@ export default function PortfolioPiecesMenu() {
     }
 
     return (
-        <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px] flex pb-[20px]">
+        <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px] flex place-content-around pb-[20px]">
             <div className="h-[30%] w-[30px] border-primary border-2 bg-lighter-black" onClick={switchGameBack}> {/* LeftButton */}
                 {/* Need to find some icon to put here */}
             </div>
-            <iframe src={game[selected].source} allowFullScreen={false} width="980" height="640"><a href={game[selected].link}>Host Source:</a></iframe>
+            <div>
+                <iframe src={game[selected].source} allowFullScreen={false} width="980" height="640"><a href={game[selected].link}>Host Source:</a></iframe>
+                <p>Just wanna put some text here for now</p>
+            </div>
             <div className="h-[30%] w-[30px] border-primary border-2 bg-lighter-black" onClick={switchGameForward}> {/* LeftButton */}
                 {/* Need to find some icon to put here */}
             </div>
