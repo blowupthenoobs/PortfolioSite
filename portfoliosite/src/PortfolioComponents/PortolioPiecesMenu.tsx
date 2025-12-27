@@ -5,7 +5,7 @@ export default function PortfolioPiecesMenu() {
 
     return (
         <div className="w-full">
-            <div className="-mx-2 w-full pl-[1%] pr-[1%] flex pt-[20px] text-blue-500 bg-bg-grey text-center">
+            <div className="w-full -ml-2 -mr-2 -my-2 pl-[1%] pr-[1%] flex pt-[20px] text-blue-500 bg-bg-grey text-center place-content-around">
                 <h1 className="bg-black border-2 rounded-md border-blue-500 p-3 min-h-[40%] max-h-[100%] w-[30%] text-[30px]">Games</h1>
                 <h1 className="bg-black border-2 rounded-md border-blue-500 p-3 min-h-[40%] max-h-[100%] w-[30%] text-[30px]">Art</h1>
                 <h1 className="bg-black border-2 rounded-md border-blue-500 p-3 min-h-[40%] max-h-[100%] w-[30%] text-[30px]">Models</h1>
