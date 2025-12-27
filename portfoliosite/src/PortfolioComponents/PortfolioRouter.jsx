@@ -73,12 +73,12 @@ const PortfolioRouter = () => {
           <HackClub/>
         }
         />
-        <Route
+        {/* <Route
         path="/*"
         element={
           <Welcome/>
         }
-        />
+        /> */}
       </Routes>
     </BrowserRouter>
   );

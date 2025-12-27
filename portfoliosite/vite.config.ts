@@ -22,7 +22,6 @@ export default defineConfig(({ mode }) => {
     },
     envDir: "./src/config/",
     server: {
-      historyApiFallback:true,
       proxy:
          {
             "/api": {
