@@ -23,5 +23,5 @@ const jsxWrapper = (
   </Provider>
 );
 
-const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
+const root = ReactDOM.createRoot(document.getElementById("app"));
 root.render(jsxWrapper);
