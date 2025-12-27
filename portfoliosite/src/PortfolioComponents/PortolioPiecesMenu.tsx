@@ -1,7 +1,11 @@
+import { useLocation } from "react-router-dom"
+
 import GamesPortfolio from "./GamesPortfolio"
 
 
 export default function PortfolioPiecesMenu() {
+    const location = useLocation();
+    const currentPath = location.pathname;
 
     return (
         <div className="w-full">
