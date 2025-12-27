@@ -5,12 +5,12 @@ export default function PortfolioPiecesMenu() {
         link: string;
     }
 
-    const game: iframeDetails[] = {
+    const game: iframeDetails[] = [
         {
             source: "https://itch.io/embed-upload/14505244?color=5e7db0",
             link: "https://lantern-games.itch.io/yet-again"
         }
-    }
+    ]
 
     return (
         <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px] flex pb-[20px]">
