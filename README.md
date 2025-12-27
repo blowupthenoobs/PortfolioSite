@@ -5,6 +5,8 @@ If you wish to run this website on your computer, you may want to note that ther
     2.) MySQL DataBase (https://github.com/blowupthenoobs/Databasing)
     3.) My myDrive Reskin (https://github.com/blowupthenoobs/driveCloneThing)
 
+To run the first part of the website, after downloading it, you will want to cd into the portfoliosite folder, and there's a chance it's already built in the repo from my idiocies, but if not you should run "npm run build" in the terminal. First you will want to set up the .env file, requiring an entry for After that you can hit "npx vite preview" and it should run the website locally on your computer.
+
 
 
 //Old README
