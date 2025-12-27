@@ -20,7 +20,6 @@ const PortfolioRouter = () => {
       <Routes>
         <Route
           path="/"
-          exact={true}
           element={
             <Homepage/>
           }
