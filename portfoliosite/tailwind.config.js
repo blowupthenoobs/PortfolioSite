@@ -22,7 +22,7 @@ module.exports = {
         "light-primary": "rgba(60, 133, 238, 0.4)",
 
         "off-black": "rgb(17, 17, 17)",
-        "lighter-black": "rgb(21, 21, 21)",
+        "lighter-black": "rgb(25, 25, 25)",
       },
       borderRadius:
       {
