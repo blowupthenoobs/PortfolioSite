@@ -18,7 +18,7 @@ import HackClub from "./HackClubMessage"
 const PortfolioRouter = () => {
   return (
     <BrowserRouter>
-      <Switch>
+      <Routes>
         <Route
           path="/"
           exact={true}
@@ -80,7 +80,7 @@ const PortfolioRouter = () => {
           <Welcome/>
         }
         />
-      </Switch>
+      </Routes>
     </BrowserRouter>
   );
 };
