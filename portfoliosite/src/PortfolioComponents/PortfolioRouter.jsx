@@ -3,7 +3,6 @@ import {
   BrowserRouter,
   Route,
   Routes,
-  HashRouter
 //   Navigate,
 //   useLocation,
 } from "react-router-dom";
@@ -17,7 +16,7 @@ import HackClub from "./HackClubMessage"
 
 const PortfolioRouter = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route
           path="/"
@@ -81,7 +80,7 @@ const PortfolioRouter = () => {
         }
         /> */}
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 
