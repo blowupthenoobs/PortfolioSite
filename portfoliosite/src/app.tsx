@@ -16,11 +16,11 @@ import PortfolioRouter from "./PortfolioComponents/PortfolioRouter";
 const queryClient = new QueryClient();
 
 const jsxWrapper = (
-  // <Provider store={store}>
-  //   <QueryClientProvider client={queryClient}>
+  <Provider store={store}>
+    <QueryClientProvider client={queryClient}>
       <PortfolioRouter/>
-  //   {/* </QueryClientProvider>
-  // </Provider> */}
+    </QueryClientProvider>
+  </Provider>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("app") as HTMLElement);
