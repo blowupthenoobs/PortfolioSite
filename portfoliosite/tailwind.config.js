@@ -21,7 +21,8 @@ module.exports = {
         "gray-third": "#ebe9f9",
         "light-primary": "rgba(60, 133, 238, 0.4)",
 
-        "off-black": "rgb(17, 17, 17)"
+        "off-black": "rgb(17, 17, 17)",
+        "lighter-black": "rgb(15, 15, 15)",
       },
       borderRadius:
       {

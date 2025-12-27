@@ -15,7 +15,7 @@ const PortfolioSideTab: React.FC<PortfolioSideTab> = ({Label, route}) => {
     }
 
     return(
-        <div className={`" bg-bg-dark-grey pt-2 pb-2 text-blue-500 border-2 border-blue-500 p-1 border-l-0 mb-3 [writing-mode:vertical-lr] select-none cursor-default"
+        <div className={`" bg-lighter-black pt-2 pb-2 text-blue-500 border-2 border-blue-500 p-1 border-l-0 mb-3 [writing-mode:vertical-lr] select-none cursor-default"
             ${ currentPath === route 
                 ? ""
                 : "mr-[10px]"
