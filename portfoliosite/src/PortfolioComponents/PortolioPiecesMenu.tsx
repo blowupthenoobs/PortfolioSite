@@ -14,15 +14,26 @@ export default function PortfolioPiecesMenu() {
                 <h1 className="bg-black border-2 rounded-md border-blue-500 p-3 min-h-[20%] max-h-[100%] w-[20%] text-[30px]">Art</h1>
                 <h1 className="bg-black border-2 rounded-md border-blue-500 p-3 min-h-[20%] max-h-[100%] w-[20%] text-[30px]">Models</h1>
             </div>
-            {currentPath.endsWith("/games")?
-                <>
-                    <GamesPortfolio/>
-                </>:
-                <>
-                    <p>Welcome to my portfolio</p>
-                    <p>Click on a button to get started</p>
-                </>
-            }
+            <div className="mt-5">
+                {currentPath.endsWith("/games")?
+                    <>
+                        <GamesPortfolio/>
+                    </>:
+                 currentPath.endsWith("/arts")?
+                    <>
+                        <p>Srry, I've still yet to hook this up</p>
+                    </>:
+                 currentPath.endsWith("/models")?
+                    <>
+                        <p>Srry, I've still yet to hook this up</p>
+                    </>:
+                    <>
+                        <p>Welcome to my portfolio</p>
+                        <p>Click on a button to get started</p>
+                    </>
+                }
+            </div>
+            
         </div>
     )
 }
