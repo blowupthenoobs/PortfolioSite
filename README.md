@@ -1,4 +1,4 @@
-A silly little portfolio site I've been working on for awhile. Fully Equipped with it's own MYSQL server/database running on my rasp pi with some of the functions I envisioned for it. That being namely to do with the secrets menu.
+A silly little portfolio site I've been working on for awhile. Fully Equipped with it's own MYSQL server/database running on my rasp pi with some of the functions I envisioned for it. That being namely to do with the secrets menu. I've been messing around with different ways to utilize my backend stuff, and it's been a rather fun journey. I definitely will want to do some redesigning, coloring, etc. in the future, but for now, I'm pretty happy with how it is.
 
 If you wish to run this website on your computer, you may want to note that there are 3 different parts to it:
     1.) This wesbite you see here
