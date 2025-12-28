@@ -14,17 +14,13 @@ export default function BlogMenu() {
 
     useEffect(() => {
         const getData = async () => {
-            console.log("began running")
             try{
                 const response = await axios.get(`${backend}/get-blogs`)
-                console.log(response)
                     
                 setBlogs(response.data);
             } catch(err) {
                 console.error('Grab failed: ', err)
             }
-
-            console.log("end of running");
         }
 
         getData();
