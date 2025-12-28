@@ -3,9 +3,14 @@ import getBackendURL from "../utils/getBackendURL";
 import axios from "axios";
 import { useState } from "react";
 
+interface Blog {
+    title: string;
+    content: string;
+}
+
 export default function BlogMenu() {
     const backend = getBackendURL();
-    const [blogs, setBlogs] = useState([])
+    const [blogs, setBlogs] = useState<Blog[]>([])
 
     const getData = async () => {
         try{
@@ -14,7 +19,7 @@ export default function BlogMenu() {
             setBlogs(response.data);
         } catch(err)
         {
-            console.error('Refresh Failed: ', err)
+            console.error('Grab failed: ', err)
         }
 
 
