@@ -30,6 +30,10 @@ export default function MainPage() {
                         <>
                             <PortfolioPiecesMenu/>
                         </>:
+                    currentPath.startsWith("/blog/") ?
+                        <>
+                            <PortfolioPiecesMenu/>
+                        </>:
                     currentPath === "/secrets"?
                     <>
                         <SecretsMenu/>

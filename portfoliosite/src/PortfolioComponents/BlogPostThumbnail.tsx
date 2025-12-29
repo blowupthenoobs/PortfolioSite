@@ -1,4 +1,4 @@
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 interface BlogPostThumbail {
     Title: string;
@@ -6,10 +6,10 @@ interface BlogPostThumbail {
 }
 
 const BlogPostThumbail: React.FC<BlogPostThumbail> = ({Title, BodyText}) => {
-    // const navigate = useNavigate();
+    const navigate = useNavigate();
 
     const sendToPage = () => {
-        // navigate(route);
+        navigate("/blog/" + Title);
     }
 
     return(

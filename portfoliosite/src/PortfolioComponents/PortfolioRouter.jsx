@@ -31,6 +31,12 @@ const PortfolioRouter = () => {
           }
         />
         <Route
+          path="/blog/*"
+          element={
+            <Homepage/>
+          }
+        />
+        <Route
           path="/snippets/*"
           element={
             <Homepage/>
