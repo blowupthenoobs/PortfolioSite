@@ -25,7 +25,7 @@ module.exports = {
         "lighter-black": "rgb(25, 25, 25)",
 
         "secondary-color": "rgb(74, 222, 128)",
-        "link-color": "#993CF0"
+        "link-color": "#A651F4"
       },
       borderRadius:
       {
