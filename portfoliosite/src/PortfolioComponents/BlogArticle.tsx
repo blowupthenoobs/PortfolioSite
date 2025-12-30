@@ -2,6 +2,7 @@ import getBackendURL from "../utils/getBackendURL";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import MarkdownIt from "markdown-it"
 
 
 interface BlogPost {
@@ -13,6 +14,9 @@ export default function BlogArticle() {
     const backend = getBackendURL();
     const location = useLocation();
     const path = location.pathname;
+    const md = MarkdownIt();
+
+    const tempTestContent = "is _this_ **text** *marked* ~~down?~~"
 
     const [blogDetails, setBlogDetails] = useState<BlogPost>({title: "title", content: "content..."})
     
@@ -44,6 +48,7 @@ export default function BlogArticle() {
             <h1>{blogDetails.title}</h1>
             <hr className="border-primary"/>
             <p>{blogDetails.content}</p>
+            <div dangerouslySetInnerHTML={{__html: md.render(tempTestContent)}}/>
         </div>
     )
 }
