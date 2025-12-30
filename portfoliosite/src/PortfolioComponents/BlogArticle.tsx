@@ -18,7 +18,8 @@ export default function BlogArticle() {
         html:true,
     });
 
-    const tempTestContent = "is _this_ **text** *marked* ~~down?~~"
+    //_italacize_ **bold** *italacize* ~~strikethrough~~
+    //writing {className} right next to any text enclosure can apply classes
 
     const [blogDetails, setBlogDetails] = useState<BlogPost>({title: "title", content: "content..."})
     
@@ -48,9 +49,8 @@ export default function BlogArticle() {
     return (
         <div>
             <h1>{blogDetails.title}</h1>
-            <hr className="border-primary"/>
-            <p>{blogDetails.content}</p>
-            <div dangerouslySetInnerHTML={{__html: md.render(tempTestContent)}}/>
+            <hr className="border-primary w-[10%]"/>
+            <div dangerouslySetInnerHTML={{__html: md.render(blogDetails.content)}}/>
         </div>
     )
 }
