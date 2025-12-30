@@ -34,11 +34,15 @@ export default function BlogMenu() {
                 .replace(/!\[.*?\]\(.*?\)/g, "");       //remove images
     }
 
+    const trimContent = (text: string) => {
+        return trimMarkdown(text).slice(0, 150)
+    }
+
     return (
         <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px]">
             {blogs.map((item) => {
                 return(
-                    <BlogPostThumbail Title={item.title} BodyText={item.content}/>
+                    <BlogPostThumbail Title={item.title} BodyText={trimContent(item.content)}/>
                 )
             })
             }
