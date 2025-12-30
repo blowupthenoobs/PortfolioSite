@@ -26,6 +26,14 @@ export default function BlogMenu() {
         getData();
     }, [backend])
 
+    const trimMarkdown = (text: string) => {
+        return text
+                .replace(/\[([^\]]+)\([^)]+\)/g, "$1")  //remove links
+                .replace(/[*_~`]/g, "")                 //remove styling
+                .replace(/#+\s?/g, "")                  //remove headers
+                .replace(/!\[.*?\]\(.*?\)/g, "");       //remove images
+    }
+
     return (
         <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px]">
             {blogs.map((item) => {
