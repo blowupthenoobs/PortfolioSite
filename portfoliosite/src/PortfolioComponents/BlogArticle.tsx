@@ -18,10 +18,10 @@ export default function BlogArticle() {
     
     const getData = async () => {
         try{
-            console.log(path.substring(5));
+            console.log(path.substring(6));
 
             const payload = {
-                article: path.substring(5),
+                article: path.substring(6),
             }
 
             const response = await axios.post(`${backend}/get-blog`, payload)
