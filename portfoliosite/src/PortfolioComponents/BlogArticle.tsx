@@ -48,7 +48,7 @@ export default function BlogArticle() {
 
     return (
         <div>
-            <h1>{blogDetails.title}</h1>
+            <h1 className="text-[30px]">{blogDetails.title}</h1>
             <hr className="border-primary w-[10%]"/>
             <div dangerouslySetInnerHTML={{__html: md.render(blogDetails.content)}}/>
         </div>
