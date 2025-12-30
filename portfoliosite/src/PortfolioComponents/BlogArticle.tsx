@@ -9,7 +9,7 @@ interface BlogPost {
     BodyText: string;
 }
 
-export default function BlogMenu() {
+export default function BlogArticle() {
     const backend = getBackendURL();
     const location = useLocation();
     const path = location.pathname;

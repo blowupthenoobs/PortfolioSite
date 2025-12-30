@@ -7,6 +7,7 @@ import PorfolioHeader from "./PortfolioHeader"
 import BlogMenu from "./BlogMenu";
 import SecretsMenu from "./SecretsMenu";
 import PortfolioPiecesMenu from "./PortolioPiecesMenu";
+import BlogArticle from "./BlogArticle";
 
 export default function MainPage() {
     const location = useLocation();
@@ -32,7 +33,7 @@ export default function MainPage() {
                         </>:
                     currentPath.startsWith("/blog/") ?
                         <>
-                            <PortfolioPiecesMenu/>
+                            <BlogArticle/>
                         </>:
                     currentPath === "/secrets"?
                     <>
