@@ -42,6 +42,8 @@ export default function BlogArticle() {
     return (
         <div>
             <h1>{blogDetails.title}</h1>
+            <hr className="text-primary"/>
+            <p>{blogDetails.content}</p>
         </div>
     )
 }
