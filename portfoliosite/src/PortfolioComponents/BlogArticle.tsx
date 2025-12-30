@@ -5,8 +5,8 @@ import { useLocation } from "react-router-dom";
 
 
 interface BlogPost {
-    Title: string;
-    BodyText: string;
+    title: string;
+    content: string;
 }
 
 export default function BlogArticle() {
@@ -14,7 +14,7 @@ export default function BlogArticle() {
     const location = useLocation();
     const path = location.pathname;
 
-    const [blogDetails, setBlogDetails] = useState<BlogPost>({Title: "title", BodyText: "content..."})
+    const [blogDetails, setBlogDetails] = useState<BlogPost>({title: "title", content: "content..."})
     
     useEffect(() => {
         const getData = async () => {
@@ -41,7 +41,7 @@ export default function BlogArticle() {
 
     return (
         <div>
-            <h1>{blogDetails.Title}</h1>
+            <h1>{blogDetails.title}</h1>
         </div>
     )
 }
