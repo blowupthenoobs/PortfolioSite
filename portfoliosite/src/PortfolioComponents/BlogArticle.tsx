@@ -14,7 +14,9 @@ export default function BlogArticle() {
     const backend = getBackendURL();
     const location = useLocation();
     const path = location.pathname;
-    const md = MarkdownIt();
+    const md = MarkdownIt({
+        html:true,
+    });
 
     const tempTestContent = "is _this_ **text** *marked* ~~down?~~"
 
