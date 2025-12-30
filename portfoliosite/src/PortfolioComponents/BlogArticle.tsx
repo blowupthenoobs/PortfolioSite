@@ -1,6 +1,6 @@
 import getBackendURL from "../utils/getBackendURL";
 import axios from "axios";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 
@@ -16,25 +16,28 @@ export default function BlogArticle() {
 
     const [blogDetails, setBlogDetails] = useState<BlogPost>({Title: "title", BodyText: "content..."})
     
-    const getData = async () => {
-        try{
-            console.log(path.substring(6));
+    useEffect(() => {
+        const getData = async () => {
+            try{
+                console.log(path.substring(6));
 
-            const payload = {
-                article: path.substring(6),
+                const payload = {
+                    article: path.substring(6),
+                }
+
+                const response = await axios.post(`${backend}/get-blog`, payload)
+                setBlogDetails(response.data);
+            } catch(err)
+            {
+                console.error('Failed to get data: ', err)
             }
 
-            const response = await axios.post(`${backend}/get-blog`, payload)
-            setBlogDetails(response.data);
-        } catch(err)
-        {
-            console.error('Failed to get data: ', err)
+
         }
 
-
-    }
-
-    getData();
+        getData();
+    })
+    
 
     return (
         <div>
