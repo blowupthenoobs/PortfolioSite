@@ -36,7 +36,7 @@ export default function BlogArticle() {
         }
 
         getData();
-    })
+    }, [backend, location, path])
     
 
     return (
