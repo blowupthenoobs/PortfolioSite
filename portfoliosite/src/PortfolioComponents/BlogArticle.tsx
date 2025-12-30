@@ -47,11 +47,11 @@ export default function BlogArticle() {
     
 
     return (
-        <div>
+        <div className="ml-3">
             <h1 className="text-[50px]">{blogDetails.title}</h1>
             <hr className="border-primary w-[10%]"/>
             <br/>
-            <div className="ml-3" dangerouslySetInnerHTML={{__html: md.render(blogDetails.content)}}/>
+            <div dangerouslySetInnerHTML={{__html: md.render(blogDetails.content)}}/>
         </div>
     )
 }
