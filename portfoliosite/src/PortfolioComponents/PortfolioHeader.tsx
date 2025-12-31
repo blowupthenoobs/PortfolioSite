@@ -3,13 +3,14 @@ interface PortfolioHeader {
 }
 
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import getBackendURL from "../utils/getBackendURL";
 
 
 const PortfolioHeader: React.FC<PortfolioHeader> = ({height = "15vh"}) => {
     const backend = getBackendURL();
     const navigate = useNavigate();
+    const location = useLocation();
 
     const getData = async () => {
         try{
@@ -28,9 +29,16 @@ const PortfolioHeader: React.FC<PortfolioHeader> = ({height = "15vh"}) => {
 
     getData();
 
+    const sendToMainPages = () => {
+        const path = location.pathname;
+
+        if(!(path === "/" || path.startsWith("/blog") || path.startsWith("/snippet") || path.startsWith("/portfolio") || path.startsWith("/secret")))
+            navigate("/")
+    }
+
     return (
         <div className="bg-lighter-black w-full max-h-[15vh] h-[full] border-b-2 border-blue-500 text-primary" style={{height}}>     {/*w-1/2 is w-[50%], w-full is same as w-[100%]*/}
-            <div className="flex w-fit m-auto h-full items-center cursor-pointer" onClick={() => {navigate("/")}}>  {/*This was a fun lil experiment, tis just a lambda apparently*/}
+            <div className="flex w-fit m-auto h-full items-center cursor-pointer" onClick={sendToMainPages}>  {/*This was a fun lil experiment, tis just a lambda apparently*/}
                 <img src="/images/MischeviousSmugSmile.png" className="h-[90%] rounded-full"/>
                 <h1 className="ml-4 text-[calc(5.5vh)]">blowupthenoobs</h1> {/*text originally 50px*/}
             </div>
