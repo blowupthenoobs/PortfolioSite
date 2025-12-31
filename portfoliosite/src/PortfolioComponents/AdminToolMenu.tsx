@@ -9,6 +9,8 @@ export default function AdminToolMenu() {
     const location = useLocation();
     const currentPath = location.pathname.substring(7);
 
+    console.log(currentPath)
+
     return (
         <div>
             <PorfolioHeader/>
