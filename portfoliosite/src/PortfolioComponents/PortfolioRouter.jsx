@@ -13,6 +13,7 @@ import Homepage from "./MainPage";
 import Drive from "./Drive"
 import Welcome from "./WelcomePage"
 import HackClub from "./HackClubMessage"
+import AdminToolMenu from "./AdminToolMenu"
 
 const PortfolioRouter = () => {
   return (
@@ -78,12 +79,12 @@ const PortfolioRouter = () => {
           <HackClub/>
         }
         />
-        {/* <Route
-        path="/*"
+        <Route
+        path="tools/*"
         element={
-          <Welcome/>
+          <AdminToolMenu/>
         }
-        /> */}
+        />
       </Routes>
     </BrowserRouter>
   );
