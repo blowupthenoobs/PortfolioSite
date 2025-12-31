@@ -7,7 +7,7 @@ import PortfolioPiecesMenu from "./PortolioPiecesMenu";
 
 export default function AdminToolMenu() {
     const location = useLocation();
-    const currentPath = location.pathname.substring(7);
+    const currentPath = location.pathname.substring(6);
 
     console.log(currentPath)
 
