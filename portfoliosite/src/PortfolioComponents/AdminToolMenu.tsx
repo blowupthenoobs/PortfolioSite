@@ -1,12 +1,14 @@
 import { useLocation } from "react-router-dom";
+import RouteBumper from "./RouteBumper";
 
 
 import PorfolioHeader from "./PortfolioHeader"
-import BlogMenu from "./BlogMenu";
+import BlogWriter from "./BlogWritingMenu";
 
 export default function AdminToolMenu() {
     const location = useLocation();
     const currentPath = location.pathname.substring(6);
+    RouteBumper();
 
     return (
         <div>
@@ -19,7 +21,7 @@ export default function AdminToolMenu() {
                         </>:
                     currentPath === "/blogging"?
                         <>
-                            <BlogMenu/>
+                            <BlogWriter/>
                         </>:
                     // currentPath === "/portfolio" || currentPath.startsWith("/portfolio/") ?
                     //     <>
