@@ -3,13 +3,10 @@ import { useLocation } from "react-router-dom";
 
 import PorfolioHeader from "./PortfolioHeader"
 import BlogMenu from "./BlogMenu";
-import PortfolioPiecesMenu from "./PortolioPiecesMenu";
 
 export default function AdminToolMenu() {
     const location = useLocation();
     const currentPath = location.pathname.substring(6);
-
-    console.log(currentPath)
 
     return (
         <div>
@@ -24,10 +21,10 @@ export default function AdminToolMenu() {
                         <>
                             <BlogMenu/>
                         </>:
-                    currentPath === "/portfolio" || currentPath.startsWith("/portfolio/") ?
-                        <>
-                            <PortfolioPiecesMenu/>
-                        </>:
+                    // currentPath === "/portfolio" || currentPath.startsWith("/portfolio/") ?
+                    //     <>
+                    //         <PortfolioPiecesMenu/>
+                    //     </>:
                     <>
                         <p>This probably shouldn't exist ¯\_(ツ)_/¯</p>
                     </>
