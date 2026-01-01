@@ -7,7 +7,7 @@ export default function PortfolioPiecesMenu() {
         <div className="w-full text-black ml-3 mt-2">
             <div className="flex">
                 <input type="text" placeholder="Title:" className="p-3 text-[30px] mb-2"/>
-                <select>
+                <select className="h-[20px] mt-5 ml-10">
                     <option value={"draft"}>draft</option>
                     <option value={"blog"}>blog</option>
                     <option value={"snippet"}>snippet</option>
