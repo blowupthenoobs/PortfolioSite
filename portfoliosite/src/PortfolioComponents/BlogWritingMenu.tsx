@@ -7,7 +7,7 @@ export default function PortfolioPiecesMenu() {
         <div className="w-full text-black">
             <input type="text" placeholder="Title:"/>
             <hr/>
-            <textarea placeholder="Content:"/>
+            <textarea className="w-full" placeholder="Content:"/>
         </div>
     )
 }
