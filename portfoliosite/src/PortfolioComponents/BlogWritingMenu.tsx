@@ -5,7 +5,9 @@ export default function PortfolioPiecesMenu() {
 
     return (
         <div className="w-full">
-
+            <input type="text" placeholder="Title:"/>
+            <hr/>
+            <textarea placeholder="Content:"/>
         </div>
     )
 }
