@@ -4,7 +4,7 @@ export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
 
     return (
-        <div className="w-full">
+        <div className="w-full text-black">
             <input type="text" placeholder="Title:"/>
             <hr/>
             <textarea placeholder="Content:"/>
