@@ -4,10 +4,10 @@ export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
 
     return (
-        <div className="w-full text-black ml-3">
+        <div className="w-full text-black ml-3 mb-2">
             <input type="text" placeholder="Title:"/>
             <hr/>
-            <textarea className="w-(calc(100% - 6px))" placeholder="Content:"/>
+            <textarea className="w-(calc(100% - 6px)) mt-2" placeholder="Content:"/>
         </div>
     )
 }
