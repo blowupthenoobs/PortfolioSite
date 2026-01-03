@@ -16,7 +16,9 @@ export default function PortfolioPiecesMenu() {
         if(mode === "writing")
             setMode("preview")
         else
+        {
             setMode("writing")
+        }
     }
 
     return (
@@ -32,11 +34,11 @@ export default function PortfolioPiecesMenu() {
             <hr className="w-[500px] border-primary"/>
             {mode == "writing"?
                 <>
-                    <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:" onChange={(e) => setContent(e.target.value)}/>
+                    <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)}/>
                 </>:
              mode == "preview"?
                 <>
-                    <div dangerouslySetInnerHTML={{__html: md.render(content)}}/>
+                    <div className="text-primary bg-bg-dark-grey" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
                 </>:
 
                 <>
