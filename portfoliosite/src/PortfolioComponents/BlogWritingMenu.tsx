@@ -1,12 +1,17 @@
+import { useState } from "react";
 import getBackendURL from "../utils/getBackendURL"
 
 export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
 
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+    const [mode, setMode] = useState("writing")
+
     return (
         <div className="w-full text-black ml-3 mt-2">
             <div className="flex">
-                <input type="text" placeholder="Title:" className="p-3 text-[30px] mb-2"/>
+                <input type="text" placeholder="Title:" className="p-3 text-[30px] mb-2" onChange={(e) => setTitle(e.target.value)}/>
                 <select className="h-[30px] mt-5 ml-5 bg-primary text-black">
                     <option value={"draft"}>draft</option>
                     <option value={"blog"}>blog</option>
@@ -14,7 +19,12 @@ export default function PortfolioPiecesMenu() {
                 </select>
             </div>
             <hr className="w-[500px] border-primary"/>
-            <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:"/>
+            <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:" onChange={(e) => setContent(e.target.value)}/>
+
+            <div className="flex mt-5">
+                <button className="bg-secondary-color">Preview</button>
+                <button className="bg-link-color">Submit</button>
+            </div>
         </div>
     )
 }
