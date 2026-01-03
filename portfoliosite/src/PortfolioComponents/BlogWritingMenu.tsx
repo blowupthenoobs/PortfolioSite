@@ -13,7 +13,10 @@ export default function PortfolioPiecesMenu() {
     const [mode, setMode] = useState("writing");
 
     const togglePreview = () => {
-
+        if(mode === "writing")
+            setMode("preview")
+        else
+            setMode("writing")
     }
 
     return (
