@@ -35,11 +35,11 @@ export default function PortfolioPiecesMenu() {
             <div className="w-[calc(100%-30px)] mt-2 min-h-[300px]">
                 {mode == "writing"?
                     <>
-                        <textarea className="p-3 w-full h-fit" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)}/>
+                        <textarea className="p-3 w-full h-full" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)}/>
                     </>:
                 mode == "preview"?
                     <>
-                        <div className="text-primary bg-bg-grey p-3 w-full h-fit" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
+                        <div className="text-primary bg-bg-grey p-3 w-full h-full" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
                     </>:
 
                     <>
