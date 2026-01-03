@@ -32,18 +32,20 @@ export default function PortfolioPiecesMenu() {
                 </select>
             </div>
             <hr className="w-[500px] border-primary"/>
-            {mode == "writing"?
-                <>
-                    <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)}/>
-                </>:
-             mode == "preview"?
-                <>
-                    <div className="text-primary bg-bg-dark-grey" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
-                </>:
+            <div className="w-[calc(100%-30px)] mt-2 min-h-[300px]">
+                {mode == "writing"?
+                    <>
+                        <textarea className="p-3" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)}/>
+                    </>:
+                mode == "preview"?
+                    <>
+                        <div className="text-primary bg-bg-dark-grey" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
+                    </>:
 
-                <>
-                </>
-            }
+                    <>
+                    </>
+                }
+            </div>
 
             <div className="flex mt-5">
                 <button className="bg-secondary-color p-2 rounded-[2px]" onClick={togglePreview}>Preview</button>
