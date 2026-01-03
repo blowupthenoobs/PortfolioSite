@@ -39,7 +39,7 @@ export default function PortfolioPiecesMenu() {
                     </>:
                 mode == "preview"?
                     <>
-                        <div className="text-primary bg-bg-dark-grey" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
+                        <div className="text-primary bg-bg-grey" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
                     </>:
 
                     <>
