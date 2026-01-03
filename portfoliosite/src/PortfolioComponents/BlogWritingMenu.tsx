@@ -1,12 +1,20 @@
 import { useState } from "react";
 import getBackendURL from "../utils/getBackendURL"
+import MarkdownIt from "markdown-it";
 
 export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
+    const md = MarkdownIt({
+        html:true,
+    });
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
-    const [mode, setMode] = useState("writing")
+    const [mode, setMode] = useState("writing");
+
+    const togglePreview = () => {
+
+    }
 
     return (
         <div className="w-full text-black ml-3 mt-2">
@@ -19,10 +27,21 @@ export default function PortfolioPiecesMenu() {
                 </select>
             </div>
             <hr className="w-[500px] border-primary"/>
-            <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:" onChange={(e) => setContent(e.target.value)}/>
+            {mode == "writing"?
+                <>
+                    <textarea className="w-[calc(100%-30px)] mt-2 min-h-[300px] p-3" placeholder="Content:" onChange={(e) => setContent(e.target.value)}/>
+                </>:
+             mode == "preview"?
+                <>
+                    <div dangerouslySetInnerHTML={{__html: md.render(content)}}/>
+                </>:
+
+                <>
+                </>
+            }
 
             <div className="flex mt-5">
-                <button className="bg-secondary-color">Preview</button>
+                <button className="bg-secondary-color" onClick={togglePreview}>Preview</button>
                 <button className="bg-link-color">Submit</button>
             </div>
         </div>
