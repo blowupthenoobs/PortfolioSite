@@ -44,8 +44,8 @@ export default function PortfolioPiecesMenu() {
             }
 
             <div className="flex mt-5">
-                <button className="bg-secondary-color" onClick={togglePreview}>Preview</button>
-                <button className="bg-link-color">Submit</button>
+                <button className="bg-secondary-color p-2" onClick={togglePreview}>Preview</button>
+                <button className="bg-link-color p-2 ml-3">Submit</button>
             </div>
         </div>
     )
