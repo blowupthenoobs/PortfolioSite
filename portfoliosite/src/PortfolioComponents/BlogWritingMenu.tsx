@@ -22,6 +22,11 @@ export default function PortfolioPiecesMenu() {
         return self.renderToken(tokens, idx, options);
     }
 
+    md.renderer.rules.image = function (tokens, idx, options, env, self) {
+        tokens[idx].attrPush(["class", "w-full"]);
+        return self.renderToken(tokens, idx, options);
+    }
+
     md.use(attrs);
 
     const [title, setTitle] = useState("");
