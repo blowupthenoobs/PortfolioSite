@@ -19,6 +19,24 @@ export default function BlogArticle() {
         html:true,
     });
 
+    md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+        const href = tokens[idx].attrGet("href");
+
+        if(!tokens[idx].attrGet("class")) {
+            tokens[idx].attrPush([
+                "class",
+                href?.startsWith("https://") ? "text-link-color" : "text-secondary-color"
+            ])
+        }
+
+        return self.renderToken(tokens, idx, options);
+    }
+
+    md.renderer.rules.image = function (tokens, idx, options, env, self) {
+        tokens[idx].attrPush(["class", "w-full"]);
+        return self.renderToken(tokens, idx, options);
+    }
+
     md.use(attrs);
 
     //_italacize_ **bold** *italacize* ~~strikethrough~~
