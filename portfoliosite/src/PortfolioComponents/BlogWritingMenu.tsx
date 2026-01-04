@@ -18,6 +18,8 @@ export default function PortfolioPiecesMenu() {
                 href?.startsWith("https://") ? "text-link-color" : "text-secondary-color"
             ])
         }
+
+        return self.renderToken(tokens, idx, options);
     }
 
     md.use(attrs);
