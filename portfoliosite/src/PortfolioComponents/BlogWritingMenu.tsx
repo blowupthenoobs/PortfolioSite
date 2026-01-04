@@ -1,12 +1,15 @@
 import { useState } from "react";
 import getBackendURL from "../utils/getBackendURL"
 import MarkdownIt from "markdown-it";
+import attrs from "markdown-it-attrs"
 
 export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
     const md = MarkdownIt({
         html:true,
     });
+
+    md.use(attrs);
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import MarkdownIt from "markdown-it"
+import attrs from "markdown-it-attrs"
 
 
 interface BlogPost {
@@ -17,6 +18,8 @@ export default function BlogArticle() {
     const md = MarkdownIt({
         html:true,
     });
+
+    md.use(attrs);
 
     //_italacize_ **bold** *italacize* ~~strikethrough~~
     //writing {className} right next to any text enclosure can apply classes
