@@ -1,13 +1,24 @@
 import { useState } from "react";
 import getBackendURL from "../utils/getBackendURL"
 import MarkdownIt from "markdown-it";
-import attrs from "markdown-it-attrs"
+import attrs from "markdown-it-attrs";
 
 export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
     const md = MarkdownIt({
         html:true,
     });
+
+    md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
+        const href = tokens[idx].attrGet("href");
+
+        if(!tokens[idx].attrGet("class")) {
+            tokens[idx].attrPush([
+                "class",
+                href?.startsWith("https://") ? "text-link-color" : "text-secondary-color"
+            ])
+        }
+    }
 
     md.use(attrs);
 

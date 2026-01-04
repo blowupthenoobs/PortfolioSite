@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import MarkdownIt from "markdown-it"
-import attrs from "markdown-it-attrs"
+import attrs from "markdown-it-attrs";
 
 
 interface BlogPost {
