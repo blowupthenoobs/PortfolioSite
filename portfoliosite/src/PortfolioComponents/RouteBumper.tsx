@@ -9,7 +9,6 @@ export default function RouteBumper()  {
     const navigate = useNavigate();
 
     useEffect(() => {
-        console.log("running");
         const checkPerms = async() => {
             const payload = {
                 token:  localStorage.getItem("currentLoginToken"),

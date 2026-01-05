@@ -47,8 +47,6 @@ export default function BlogArticle() {
     useEffect(() => {
         const getData = async () => {
             try{
-                console.log(path.substring(6));
-
                 const payload = {
                     article: path.substring(6),
                 }
