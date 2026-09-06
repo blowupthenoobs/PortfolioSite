@@ -1,3 +1,5 @@
+import MainBio from "./MainBio";
+
 
 export default function HomePortfolioPage() {
 const getData = async () => {
@@ -7,8 +9,8 @@ const getData = async () => {
     getData();
 
     return (
-        <div>
-            <h1>Hello world</h1>
+        <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px]">
+            <MainBio/>
         </div>
     )
 }

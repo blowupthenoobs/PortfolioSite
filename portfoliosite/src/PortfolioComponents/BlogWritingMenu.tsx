@@ -10,6 +10,7 @@ export default function PortfolioPiecesMenu() {
     const navigate = useNavigate();
     const md = MarkdownIt({
         html:true,
+        breaks:true,
     });
 
     md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
@@ -76,7 +77,19 @@ export default function PortfolioPiecesMenu() {
             <div className="w-[calc(100%-30px)] mt-2 min-h-[300px]">
                 {mode == "writing"?
                     <>
-                        <textarea className="p-3 w-full h-full" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)}/>
+                        <textarea className="p-3 w-full h-full min-h-[500px]" placeholder="Content:" value={content} onChange={(e) => setContent(e.target.value)} onKeyDown={(e) => {
+                            if(e.key === "Tab") {
+                                e.preventDefault();
+                                
+                                const textarea = e.currentTarget;
+                                const start = textarea.selectionStart;
+                                const end = textarea.selectionEnd;
+                                setContent(content.substring(0, start) + "          " + content.substring(end));
+                                setTimeout(() => {
+                                    textarea.selectionStart = textarea.selectionEnd = start + 10;
+                                }, 0);
+                            }
+                        }}/>
                     </>:
                 mode == "preview"?
                     <>

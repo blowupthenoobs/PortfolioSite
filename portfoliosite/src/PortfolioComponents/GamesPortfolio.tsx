@@ -33,11 +33,11 @@ export default function PortfolioPiecesMenu() {
     const [selected, moveSelected] = useState(0);
 
     const switchGameForward = () => {
-        moveSelected(prev => (prev +1) % game.length)
+        moveSelected(prev => (prev + 1) % game.length)
     }
 
     const switchGameBack = () => {
-        moveSelected(prev => (prev + 1 + game.length) % game.length)
+        moveSelected(prev => (prev - 1 + game.length) % game.length)
     }
 
     return (
