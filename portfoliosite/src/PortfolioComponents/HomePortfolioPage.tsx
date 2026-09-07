@@ -1,4 +1,5 @@
 import MainBio from "./MainBio";
+import DiscordStatusWidget from "./DiscordStatusWidget";
 
 
 export default function HomePortfolioPage() {
@@ -10,7 +11,13 @@ const getData = async () => {
 
     return (
         <div className="w-full h-full  pl-[1%] pr-[1%] pt-[20px]">
-            <MainBio/>
+            <div className="flex justify-between">
+                <MainBio/>
+                <DiscordStatusWidget/>
+            </div>
+            <div className="flex justify-between">
+                
+            </div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 export default function MainBio() {
     return (
-        <div className={"bg-off-black text-blue-500 border-2 rounded-md border-blue-500 p-3 min-h-[40%] w-[50%] text-lg"}>
+        <div className={"bg-off-black text-blue-500 border-2 rounded-md border-blue-500 p-3 min-h-[40%] flex-1 mr-6 text-lg"}>
             <p>Hello there, welcome to my little corner of the internet.</p>
             <p>As you could probably figure through the header bar, I'm blowupthenoobs, a __yo aspiring game developer, 
             though I do frequently find myself trying to use my coding disciplines to occassionally work on other types of projects as well (like this website). 
