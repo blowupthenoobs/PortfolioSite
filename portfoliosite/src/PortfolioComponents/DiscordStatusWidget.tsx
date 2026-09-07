@@ -158,6 +158,8 @@ const getFillPercent = () => {
                             <p className="justify-self-center text-[20px]">{data?.spotify.song}</p>
                             <img src={data?.spotify.album_art_url} className="w-[90%] ml-auto mr-auto"/>
 
+                            <div className="h-[2px]"></div> {/* couldn't find any other way to make a space, lol*/}
+
                             {/* Music Progress */}
                             <div className="h-2 w-[91%] bg-blue-200 justify-self-center rounded-md">
                                 <div className="h-full bg-blue-500 rounded-md" style={{width: `${getFillPercent()}%`}}></div>

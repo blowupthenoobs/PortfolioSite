@@ -1,8 +1,9 @@
 import MainBio from "./MainBio";
 import DiscordStatusWidget from "./DiscordStatusWidget";
-import HomeSampleArtPiece from "./HomeSampleArtPiece";
-import BlogPostThumbail from "./BlogPostThumbnail";
+import FeaturedArtPieceWidget from "./FeaturedArtPieceWidget";
+import FeaturedBlogWidget from "./FeaturedBlogWidget";
 import RandomNuggetOfWisdom from "./RandomNuggetOfWisdom";
+import SocialsWidget from "./SocialsWidget";
 
 
 export default function HomePortfolioPage() {
@@ -18,12 +19,13 @@ const getData = async () => {
                 <MainBio/>
                 <DiscordStatusWidget/>
             </div>
-            <div className="flex justify-between mt-[20px]">
-                <HomeSampleArtPiece/>
-                <BlogPostThumbail Title={"Testing"} BodyText={"Here's a lot of body text to work with as sort of a temp"}/>
+            <div className="flex mt-[20px] mb-[30px]">
+                <FeaturedArtPieceWidget/>
+                <FeaturedBlogWidget/>
 
                 <div className="flex-col w-[20%]">
                     <RandomNuggetOfWisdom/>
+                    <SocialsWidget/>
                 </div>
             </div>
         </div>

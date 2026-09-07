@@ -1,5 +1,5 @@
 
-export default function HomeSampleArtPiece() {
+export default function FeaturedArtPieceWidget() {
 const getData = async () => {
     //Does nothing rn I guess
 }
