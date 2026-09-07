@@ -45,3 +45,8 @@
 .disable-force-touch {
   -webkit-touch-callout: none;
 }
+
+@keyframes scroll {
+  from { transform: translateX(100%)};
+  to { transform: translateX(-100%)};
+}
