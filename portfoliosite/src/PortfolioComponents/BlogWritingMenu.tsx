@@ -1,37 +1,12 @@
 import { useState } from "react";
 import getBackendURL from "../utils/getBackendURL"
-import MarkdownIt from "markdown-it";
-import attrs from "markdown-it-attrs";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import MarkDownBubble from "./MarkDownBubble";
 
 export default function PortfolioPiecesMenu() {
     const backend = getBackendURL();
     const navigate = useNavigate();
-    const md = MarkdownIt({
-        html:true,
-        breaks:true,
-    });
-
-    md.renderer.rules.link_open = function (tokens, idx, options, env, self) {
-        const href = tokens[idx].attrGet("href");
-
-        if(!tokens[idx].attrGet("class")) {
-            tokens[idx].attrPush([
-                "class",
-                href?.startsWith("https://") ? "text-link-color" : "text-secondary-color"
-            ])
-        }
-
-        return self.renderToken(tokens, idx, options);
-    }
-
-    md.renderer.rules.image = function (tokens, idx, options, env, self) {
-        tokens[idx].attrPush(["class", "w-full"]);
-        return self.renderToken(tokens, idx, options);
-    }
-
-    md.use(attrs);
 
     const [title, setTitle] = useState("");
     const [content, setContent] = useState("");
@@ -93,7 +68,7 @@ export default function PortfolioPiecesMenu() {
                     </>:
                 mode == "preview"?
                     <>
-                        <div className="text-primary bg-bg-grey p-3 w-full h-full" dangerouslySetInnerHTML={{__html: md.render(content)}}/>
+                        <MarkDownBubble text={content}/>
                     </>:
 
                     <>

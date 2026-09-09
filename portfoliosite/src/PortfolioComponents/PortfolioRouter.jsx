@@ -56,6 +56,12 @@ const PortfolioRouter = () => {
         }
         />
         <Route
+        path="/applications"
+        element={
+          <Homepage/>
+        }
+        />
+        <Route
         path="/drive"
         element={
           <Drive/>
