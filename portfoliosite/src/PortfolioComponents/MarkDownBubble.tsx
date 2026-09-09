@@ -37,8 +37,8 @@ const MarkDownBubble: React.FC<MarkDownBubble> = ({text}) => {
     //writing {className} right next to any text enclosure can apply classes
 
     return(
-        <div className="text-primary bg-bg-grey p-3 w-full h-full" dangerouslySetInnerHTML={{__html: md.render(text)}}/>
+        <div dangerouslySetInnerHTML={{__html: md.render(text)}}/>
     )
-}
+} // className="text-primary bg-bg-grey p-3 w-full h-full"
 
 export default MarkDownBubble;

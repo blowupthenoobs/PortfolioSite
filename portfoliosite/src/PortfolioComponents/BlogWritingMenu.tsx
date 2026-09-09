@@ -68,7 +68,9 @@ export default function PortfolioPiecesMenu() {
                     </>:
                 mode == "preview"?
                     <>
-                        <MarkDownBubble text={content}/>
+                        <div className="text-primary bg-bg-grey p-3 w-full h-full">
+                            <MarkDownBubble text={content}/>
+                        </div>
                     </>:
 
                     <>
